@@ -1,0 +1,45 @@
+Objetivo: 
+
+Mejorar la calidad del código en el proyecto adjunto identificando y resolviendo las deudas técnicas presentes.
+
+Tareas:
+
+- Consolidar Estado:
+
+Descripción: 
+
+Actualmente, el estado de los paquetes y el filtro se gestionan con variables globales. Refactoriza el código para usar un objeto que agrupe el estado de la aplicación (paquetes y filtro) en un solo lugar.
+
+Acción: 
+
+Crea un objeto estado que contenga paquetes y filtro, y actualiza las funciones para que utilicen este objeto en lugar de las variables globales.
+
+- Separar Funciones:
+
+Descripción: 
+
+Las funciones agregarPaquete, alternarReserva, eliminarPaquete y filtrarPaquetes están definidas en el ámbito global. Refactoriza el código para agrupar estas funciones en un objeto o módulo separado para mejorar la modularidad y organización.
+
+Acción: 
+
+Crea un objeto app que contenga estas funciones y actualiza el código para que las funciones sean métodos de este objeto.
+
+- Optimización de Identificadores:
+
+Descripción: 
+
+Los identificadores únicos para los paquetes se generan usando Date.now(), lo cual puede no ser suficientemente robusto. Refactoriza para utilizar una solución más segura para la generación de IDs.
+
+Acción: 
+
+Implementa una función generadora de IDs únicos o utiliza un contador para asegurar la unicidad de los identificadores de los paquetes.
+
+- Validación de Entrada:
+
+Descripción: 
+
+El nombre del paquete se valida para asegurarse de que no esté vacío, pero no se verifica si contiene solo espacios en blanco. Mejora la validación para manejar estos casos.
+
+Acción: 
+
+Asegurate de que el nombre del paquete no contenga solo espacios en blanco, utilizando una expresión regular o un método de validación más robusto.
